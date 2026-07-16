@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA RTX PRO 6000 Blackwell — Die ultimative Workstation-GPU</title>
+  <meta name="description" content="Entdecke die NVIDIA RTX PRO 6000 Blackwell: 96 GB GDDR7, 24.064 CUDA-Kerne, 4000 AI TOPS. Die leistungsstärkste Workstation-GPU aller Zeiten.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a1f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2376b900'>⬢</text></svg>">
+</head>
+<body>
+
+  <!-- Fortschrittsbalken -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <svg viewBox="0 0 32 32" class="nav-logo-icon"><polygon points="16,2 29,9.5 29,22.5 16,30 3,22.5 3,9.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+        <span>RTX&nbsp;PRO&nbsp;6000</span>
+      </a>
+      <div class="nav-links">
+        <a href="#specs" class="nav-link">Spezifikationen</a>
+        <a href="#architecture" class="nav-link">Architektur</a>
+        <a href="#performance" class="nav-link">Performance</a>
+        <a href="#gallery" class="nav-link">Galerie</a>
+        <a href="#specs" class="btn btn-primary btn-sm">Jetzt entdecken</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">NVIDIA Blackwell-Architektur</p>
+      <h1 class="hero-title">
+        <span class="hero-line reveal" style="--d:.1s">RTX&nbsp;PRO&nbsp;6000</span>
+        <span class="hero-line hero-line-accent reveal" style="--d:.25s">Blackwell</span>
+      </h1>
+      <p class="hero-sub reveal" style="--d:.4s">
+        Die leistungsstärkste Workstation-GPU, die je gebaut wurde.<br>
+        96&nbsp;GB GDDR7 · 24.064 CUDA-Kerne · 4000 AI&nbsp;TOPS
+      </p>
+      <div class="hero-cta reveal" style="--d:.55s">
+        <a href="#specs" class="btn btn-primary">Spezifikationen ansehen</a>
+        <a href="#architecture" class="btn btn-ghost">Architektur erkunden</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ============ SVG LINE DRAWING: GPU ============ -->
+  <section class="section section-draw" id="draw">
+    <div class="container">
+      <p class="section-eyebrow reveal">Design trifft Ingenieurskunst</p>
+      <h2 class="section-title reveal">Gezeichnet für <span class="accent">Höchstleistung</span></h2>
+      <p class="section-text reveal">Scrolle weiter und sieh zu, wie die GPU Linie für Linie entsteht.</p>
+
+      <div class="draw-wrap">
+        <svg id="gpuDrawing" viewBox="0 0 900 420" fill="none" aria-label="Technische Zeichnung der RTX PRO 6000">
+          <!-- Karten-Umriss -->
+          <rect class="draw-path" x="40" y="60" width="820" height="260" rx="18"/>
+          <!-- PCIe-Slot -->
+          <path class="draw-path" d="M120 320 v40 h340 v-40"/>
+          <path class="draw-path" d="M140 360 h80 M240 360 h220"/>
+          <!-- Lüfter links -->
+          <circle class="draw-path" cx="220" cy="190" r="95"/>
+          <circle class="draw-path" cx="220" cy="190" r="30"/>
+          <path class="draw-path" d="M220 160 a30 30 0 0 1 26 15 M250 205 a30 30 0 0 1 -30 15 M190 205 a30 30 0 0 1 4 -50"/>
+          <path class="draw-path" d="M220 95 a95 95 0 0 1 82 47 M302 237 a95 95 0 0 1 -82 48 M138 237 a95 95 0 0 1 0 -95"/>
+          <!-- Lüfter rechts -->
+          <circle class="draw-path" cx="680" cy="190" r="95"/>
+          <circle class="draw-path" cx="680" cy="190" r="30"/>
+          <path class="draw-path" d="M680 160 a30 30 0 0 1 26 15 M710 205 a30 30 0 0 1 -30 15 M650 205 a30 30 0 0 1 4 -50"/>
+          <path class="draw-path" d="M680 95 a95 95 0 0 1 82 47 M762 237 a95 95 0 0 1 -82 48 M598 237 a95 95 0 0 1 0 -95"/>
+          <!-- GPU-Die in der Mitte -->
+          <rect class="draw-path" x="400" y="130" width="120" height="120" rx="8"/>
+          <rect class="draw-path" x="425" y="155" width="70" height="70" rx="4"/>
+          <!-- Leiterbahnen -->
+          <path class="draw-path" d="M400 150 h-40 v-40 h-30 M400 190 h-55 M400 230 h-40 v40 h-30"/>
+          <path class="draw-path" d="M520 150 h40 v-40 h30 M520 190 h55 M520 230 h40 v40 h30"/>
+          <!-- Stromanschluss -->
+          <rect class="draw-path" x="700" y="40" width="90" height="20" rx="4"/>
+          <path class="draw-path" d="M715 40 v-12 M735 40 v-12 M755 40 v-12 M775 40 v-12"/>
+          <!-- Schriftzug-Linie -->
+          <path class="draw-path" d="M370 300 h160"/>
+        </svg>
+        <div class="draw-caption">
+          <span class="mono">BLACKWELL&nbsp;·&nbsp;GB202&nbsp;·&nbsp;96&nbsp;GB&nbsp;GDDR7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPEZIFIKATIONEN ============ -->
+  <section class="section" id="specs">
+    <div class="container">
+      <p class="section-eyebrow reveal">Technische Daten</p>
+      <h2 class="section-title reveal">Zahlen, die <span class="accent">sprechen</span></h2>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal" style="--d:.05s">
+          <div class="stat-value"><span class="counter" data-target="24064">0</span></div>
+          <div class="stat-label">CUDA-Kerne</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.1s">
+          <div class="stat-value"><span class="counter" data-target="96">0</span>&nbsp;GB</div>
+          <div class="stat-label">GDDR7-Speicher mit ECC</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.15s">
+          <div class="stat-value"><span class="counter" data-target="4000">0</span></div>
+          <div class="stat-label">AI TOPS (FP4)</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.2s">
+          <div class="stat-value"><span class="counter" data-target="1792">0</span>&nbsp;GB/s</div>
+          <div class="stat-label">Speicherbandbreite</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.25s">
+          <div class="stat-value"><span class="counter" data-target="125">0</span>&nbsp;TFLOPS</div>
+          <div class="stat-label">Single-Precision (FP32)</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.3s">
+          <div class="stat-value"><span class="counter" data-target="512">0</span>-bit</div>
+          <div class="stat-label">Speicherinterface</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.35s">
+          <div class="stat-value">PCIe <span class="counter" data-target="5">0</span>.0</div>
+          <div class="stat-label">System-Schnittstelle ×16</div>
+        </div>
+        <div class="stat-card reveal" style="--d:.4s">
+          <div class="stat-value"><span class="counter" data-target="600">0</span>&nbsp;W</div>
+          <div class="stat-label">Total Board Power</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARCHITEKTUR ============ -->
+  <section class="section section-alt" id="architecture">
+    <div class="container">
+      <p class="section-eyebrow reveal">Blackwell im Detail</p>
+      <h2 class="section-title reveal">Eine Architektur.<br><span class="accent">Grenzenlose Möglichkeiten.</span></h2>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d:.05s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><rect x="10" y="10" width="28" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="19" y="19" width="10" height="10" fill="currentColor"/><path d="M16 10V4 M24 10V4 M32 10V4 M16 44v-6 M24 44v-6 M32 44v-6 M10 16H4 M10 24H4 M10 32H4 M44 16h-6 M44 24h-6 M44 32h-6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>5. Gen Tensor-Kerne</h3>
+          <p>Bis zu 4000 AI TOPS mit FP4-Präzision und DLSS 4 Multi Frame Generation — für KI-Workloads, die gestern noch unmöglich waren.</p>
+        </article>
+
+        <article class="feature-card reveal" style="--d:.1s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><path d="M24 4 L44 40 H4 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 14 L36 36 H12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="30" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>4. Gen RT-Kerne</h3>
+          <p>Bis zu 380 RT TFLOPS für fotorealistisches Echtzeit-Raytracing und Neural Rendering in Film, Design und Simulation.</p>
+        </article>
+
+        <article class="feature-card reveal" style="--d:.15s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 20v8 M18 20v8 M24 20v8 M30 20v8 M36 20v8" stroke="currentColor" stroke-width="2"/><path d="M14 14V8h20v6 M14 34v6h20v-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </div>
+          <h3>96 GB GDDR7 mit ECC</h3>
+          <p>Der größte Grafikspeicher, der je in einer Workstation-Karte verbaut wurde — für Modelle mit Milliarden Parametern und riesige Szenen.</p>
+        </article>
+
+        <article class="feature-card reveal" style="--d:.2s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><rect x="4" y="8" width="40" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 20h40 M4 30h40 M16 8v32 M32 8v32" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Multi-Instance GPU</h3>
+          <p>Teile die Karte in bis zu vier vollständig isolierte Instanzen — perfekt für Teams, Rendering-Farmen und virtualisierte Umgebungen.</p>
+        </article>
+
+        <article class="feature-card reveal" style="--d:.25s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><path d="M24 4v40 M24 4l-8 8 M24 4l8 8 M24 44l-8-8 M24 44l8-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M8 24h32" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>
+          </div>
+          <h3>PCIe 5.0 ×16</h3>
+          <p>Doppelte Bandbreite gegenüber der Vorgängergeneration — Daten fließen mit bis zu 128 GB/s zwischen CPU und GPU.</p>
+        </article>
+
+        <article class="feature-card reveal" style="--d:.3s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 12v12l9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h3>DisplayPort 2.1</h3>
+          <p>Vier Anschlüsse mit bis zu 8K bei 240 Hz oder 16K bei 60 Hz — für die Displays von morgen schon heute gerüstet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERFORMANCE ============ -->
+  <section class="section" id="performance">
+    <div class="container">
+      <p class="section-eyebrow reveal">Benchmark</p>
+      <h2 class="section-title reveal">Generationensprung, <span class="accent">messbar</span></h2>
+      <p class="section-text reveal">Relative Leistung gegenüber der RTX 6000 Ada Generation (100&nbsp;%).</p>
+
+      <div class="bars">
+        <div class="bar-row reveal">
+          <span class="bar-label">KI-Inferenz (FP4)</span>
+          <div class="bar-track"><div class="bar-fill" data-width="100"><span class="bar-value">bis zu 3×</span></div></div>
+        </div>
+        <div class="bar-row reveal" style="--d:.1s">
+          <span class="bar-label">Raytracing</span>
+          <div class="bar-track"><div class="bar-fill" data-width="80"><span class="bar-value">~2×</span></div></div>
+        </div>
+        <div class="bar-row reveal" style="--d:.2s">
+          <span class="bar-label">Speicherkapazität</span>
+          <div class="bar-track"><div class="bar-fill" data-width="66"><span class="bar-value">2× (96 vs. 48 GB)</span></div></div>
+        </div>
+        <div class="bar-row reveal" style="--d:.3s">
+          <span class="bar-label">Speicherbandbreite</span>
+          <div class="bar-track"><div class="bar-fill" data-width="60"><span class="bar-value">1,86×</span></div></div>
+        </div>
+      </div>
+
+      <div class="quote reveal">
+        <svg class="quote-mark" viewBox="0 0 40 32"><path d="M0 32V20C0 8 6 2 16 0l2 6c-6 2-9 5-9 10h9v16H0zm22 0V20C22 8 28 2 38 0l2 6c-6 2-9 5-9 10h9v16H22z" fill="currentColor"/></svg>
+        <p>„Die RTX PRO 6000 Blackwell definiert neu, was auf einer einzelnen Workstation möglich ist — vom Training lokaler LLMs bis zum Echtzeit-Rendering ganzer Filmszenen."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIE ============ -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <p class="section-eyebrow reveal">Galerie</p>
+      <h2 class="section-title reveal">Aus jedem Winkel <span class="accent">beeindruckend</span></h2>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal" style="--d:.05s">
+          <svg viewBox="0 0 400 300" class="gallery-art">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e3a20"/><stop offset="1" stop-color="#04120a"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <rect x="60" y="80" width="280" height="140" rx="12" fill="none" stroke="#76b900" stroke-width="2" opacity=".9"/>
+            <circle cx="140" cy="150" r="45" fill="none" stroke="#76b900" stroke-width="2" opacity=".7"/>
+            <circle cx="260" cy="150" r="45" fill="none" stroke="#76b900" stroke-width="2" opacity=".7"/>
+            <circle cx="140" cy="150" r="14" fill="#76b900" opacity=".5"/>
+            <circle cx="260" cy="150" r="14" fill="#76b900" opacity=".5"/>
+          </svg>
+          <figcaption>Dual-Axial-Kühlung</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" style="--d:.1s">
+          <svg viewBox="0 0 400 300" class="gallery-art">
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <rect x="150" y="100" width="100" height="100" rx="6" fill="none" stroke="#76b900" stroke-width="2"/>
+            <rect x="172" y="122" width="56" height="56" rx="3" fill="#76b900" opacity=".25"/>
+            <path d="M150 120h-50M150 150h-70M150 180h-50M250 120h50M250 150h70M250 180h50M170 100V60M200 100V45M230 100V60M170 200v40M200 200v55M230 200v40" stroke="#76b900" stroke-width="1.5" opacity=".6"/>
+            <circle cx="100" cy="120" r="3" fill="#76b900"/><circle cx="80" cy="150" r="3" fill="#76b900"/><circle cx="100" cy="180" r="3" fill="#76b900"/>
+            <circle cx="300" cy="120" r="3" fill="#76b900"/><circle cx="320" cy="150" r="3" fill="#76b900"/><circle cx="300" cy="180" r="3" fill="#76b900"/>
+          </svg>
+          <figcaption>GB202 Blackwell-Die</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" style="--d:.15s">
+          <svg viewBox="0 0 400 300" class="gallery-art">
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <g stroke="#76b900" stroke-width="1.5" opacity=".8" fill="none">
+              <path d="M40 260 L40 100 L120 100 L120 180 L200 180 L200 60 L280 60 L280 140 L360 140"/>
+              <circle cx="40" cy="100" r="5" fill="#76b900"/>
+              <circle cx="120" cy="180" r="5" fill="#76b900"/>
+              <circle cx="200" cy="60" r="5" fill="#76b900"/>
+              <circle cx="280" cy="140" r="5" fill="#76b900"/>
+            </g>
+            <g fill="#76b900" opacity=".2">
+              <rect x="30" y="230" width="20" height="30"/><rect x="110" y="200" width="20" height="60"/><rect x="190" y="150" width="20" height="110"/><rect x="270" y="100" width="20" height="160"/><rect x="350" y="70" width="20" height="190"/>
+            </g>
+          </svg>
+          <figcaption>Skalierbare Performance</figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" style="--d:.2s">
+          <svg viewBox="0 0 400 300" class="gallery-art">
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <g stroke="#76b900" fill="none" stroke-width="1.5">
+              <rect x="70" y="70" width="260" height="160" rx="8" opacity=".9"/>
+              <path d="M70 110h260 M70 150h260 M70 190h260 M135 70v160 M200 70v160 M265 70v160" opacity=".35"/>
+            </g>
+            <g fill="#76b900"><circle cx="102" cy="90" r="4" opacity=".9"/><circle cx="167" cy="130" r="4" opacity=".7"/><circle cx="232" cy="170" r="4" opacity=".9"/><circle cx="297" cy="210" r="4" opacity=".7"/></g>
+          </svg>
+          <figcaption>Multi-Instance GPU (MIG)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section section-cta">
+    <div class="container center">
+      <h2 class="section-title reveal">Bereit für die <span class="accent">nächste Generation</span>?</h2>
+      <p class="section-text reveal">Erfahre mehr über die RTX PRO 6000 Blackwell direkt bei NVIDIA.</p>
+      <div class="hero-cta reveal" style="--d:.15s">
+        <a href="https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/" target="_blank" rel="noopener" class="btn btn-primary">Zur offiziellen Produktseite</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Inoffizielle Fan-/Info-Seite zur NVIDIA RTX PRO 6000 Blackwell. Alle Markennamen gehören ihren jeweiligen Eigentümern. Spezifikationen laut öffentlichen NVIDIA-Angaben.</p>
+      <p class="mono">© 2026 · Erstellt mit HTML, CSS &amp; Vanilla JS</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
